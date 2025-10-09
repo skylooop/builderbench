@@ -1,0 +1,56 @@
+[build-system]
+requires = [ "setuptools", "wheel" ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "builderbench"
+version = "0.1.0"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+  {name = "Raj Ghugare"},
+  {name = "Catherine Ji"},
+  {name = "Kathryn Wantlin"},
+  {name = "Jin Schofield"},
+  {name = "Benjamin Eysenbach"},
+]
+maintainers = [
+    {name = "Raj Ghugare"}
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+    "mujoco >= 3.3.6",
+    "mujoco-mjx >= 3.3.6",
+    "jax[cuda12] >= 0.6.2",
+    "optax >= 0.2.5",
+    "etils",
+    "ml_collections",
+]
+
+[project.optional-dependencies]
+train = [
+    "flax >= 0.10.5",
+    "distrax >= 0.1.5",
+    "wandb >= 0.19.1",
+    "wandb_osh >= 1.2.2",
+    "mediapy",
+    "matplotlib",
+    "tyro",
+]
+
+all = [
+    "builderbench[train]",
+]
+
+[project.urls]
+homepage = "https://rajghugare19.github.io/builderbench"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["builderbench*"]
