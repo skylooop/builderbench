@@ -16,7 +16,6 @@ import wandb_osh
 import jax
 import flax
 import optax
-import distrax
 import flax.linen as nn
 import jax.numpy as jnp
 
@@ -28,11 +27,11 @@ from dataclasses import dataclass
 from typing import NamedTuple
 from wandb_osh.hooks import TriggerWandbSyncHook
 
-from utils.buffer import TrajectoryUniformSamplingQueue
-from utils.wrapper import wrap_env
-from utils.evaluation import Evaluator
-from utils.networks import MLP, save_params
-from buildstuff.env_utils import make_env
+from impls.utils.buffer import TrajectoryUniformSamplingQueue
+from impls.utils.wrapper import wrap_env
+from impls.utils.evaluation import Evaluator
+from impls.utils.networks import MLP, save_params
+from builderbench.env_utils import make_env
 
 @dataclass
 class Args:

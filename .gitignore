@@ -5,3 +5,4 @@ __pycache__/
 MUJOCO_LOG.txt
 */checkpoints/
 */videos/
+.venv

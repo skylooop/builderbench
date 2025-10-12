@@ -6,7 +6,7 @@ from mujoco import rollout
 
 from typing import Callable
 
-from utils.wrapper import EvalWrapper
+from impls.utils.wrapper import EvalWrapper
 
 def get_trajectory(policy, env, key, unroll_length):
     @jax.jit
