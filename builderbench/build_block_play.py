@@ -18,7 +18,6 @@ from builderbench.env_utils import get_assets, State
 from builderbench.constants import _ARM_JOINTS, _FOREARM_DOFS, _CUSTOM_COLORS
 
 def default_config() -> config_dict.ConfigDict:
-    """Returns the default config for the creative double cube task"""
     config = config_dict.create(
         ctrl_dt=0.02,
         sim_dt=0.002,
